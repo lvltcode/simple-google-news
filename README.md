@@ -2,7 +2,7 @@
 
 Created with love by: `lvltcode`
   
-View online at: `Your URL here`
+View online at: `https://simple-google-news.netlify.com/`
   
 One or two sentence summary of your project. 
 

@@ -1,8 +1,9 @@
 let news = [];
+let page = 20;
 
 async function fetchNews() {
   let url =
-    "https://newsapi.org/v2/top-headlines?country=us&apiKey=ecefa49813d6400bbe56135f96b08645";
+    `https://newsapi.org/v2/everything?pageSize=${page}&q=Apple&from=2019-03-13&sortBy=popularity&apiKey=ecefa49813d6400bbe56135f96b08645`;
   let results = await fetch(url);
   let data = await results.json();
   news = data.articles;
@@ -32,18 +33,17 @@ function render() {
         </div>
       </div>`
   );
+  // moreNews = news.length;
 }
 
-let moreNews = news.length;
-
 let loadMore = () => {
-  moreNews += 20;
+  page += 20;
+  // alert(moreNews);
   fetchNews();
 };
 
 
 let loadBtn = document.querySelector('#load-more');
 loadBtn.addEventListener('click', loadMore);
-
 
 fetchNews();

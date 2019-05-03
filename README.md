@@ -1,4 +1,4 @@
-# CoderSchool FTW - Simple Google News
+# Simple Google News
 
 Created with love by: `lvltcode`
   
